@@ -14,17 +14,18 @@ namespace Osztalykaracsony
 {
     public partial class FrmMain : Form
     {
-        //SqlConnection conn;
+        string connectionstring= @"Server=(localdb)\MSSQLLocalDB;AttachDbFileName=|DataDirectory|\Resources\mikulas.mdf;Trusted_Connection=True;";
+
+        SqlConnection conn;
         public FrmMain()
         {
+            
             InitializeComponent();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            //conn = new SqlConnection(@"Server=(localdb)\Resources;Database=mikulas;");
-
-
+             
         }
 
         private void kilep_Click(object sender, EventArgs e)
@@ -32,6 +33,27 @@ namespace Osztalykaracsony
             this.Hide();
             Form2 f2 = new Form2();
             f2.ShowDialog();
+        }
+
+        private void osztbetolt_Click(object sender, EventArgs e)
+        {
+            
+            FrmOsztaly fo = new FrmOsztaly(connectionstring);
+            fo.ShowDialog();
+        }
+
+        private void sors_Click(object sender, EventArgs e)
+        {
+            
+            FrmSorsolas fs = new FrmSorsolas(connectionstring);
+            fs.ShowDialog();
+        }
+
+        private void csomi_Click(object sender, EventArgs e)
+        {
+            
+            Frmcsomagepito fcs = new Frmcsomagepito(connectionstring);
+            fcs.ShowDialog();
         }
     }
 }

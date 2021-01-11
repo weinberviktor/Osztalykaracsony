@@ -55,6 +55,7 @@
             this.osztbetolt.TabIndex = 1;
             this.osztbetolt.Text = "Oszály betöltése";
             this.osztbetolt.UseVisualStyleBackColor = true;
+            this.osztbetolt.Click += new System.EventHandler(this.osztbetolt_Click);
             // 
             // sors
             // 
@@ -64,6 +65,7 @@
             this.sors.TabIndex = 2;
             this.sors.Text = "Sorsolás";
             this.sors.UseVisualStyleBackColor = true;
+            this.sors.Click += new System.EventHandler(this.sors_Click);
             // 
             // csomi
             // 
@@ -73,6 +75,7 @@
             this.csomi.TabIndex = 3;
             this.csomi.Text = "Csomagépitő";
             this.csomi.UseVisualStyleBackColor = true;
+            this.csomi.Click += new System.EventHandler(this.csomi_Click);
             // 
             // kilep
             // 
@@ -88,12 +91,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 327);
+            this.BackColor = System.Drawing.Color.Red;
+            this.ClientSize = new System.Drawing.Size(328, 242);
             this.Controls.Add(this.kilep);
             this.Controls.Add(this.csomi);
             this.Controls.Add(this.sors);
             this.Controls.Add(this.osztbetolt);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMain";
             this.Text = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);

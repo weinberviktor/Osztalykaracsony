@@ -10,24 +10,16 @@ using System.Windows.Forms;
 
 namespace Osztalykaracsony
 {
-    public partial class Form2 : Form
+    public partial class Frmcsomagepito : Form
     {
-        public Form2()
+        public Frmcsomagepito(string connectionstring)
         {
             InitializeComponent();
         }
 
-        private void I_Click(object sender, EventArgs e)
+        private void Frmcsomagepito_Load(object sender, EventArgs e)
         {
-            Application.Exit();
-            
-        }
 
-        private void N_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FrmMain fr = new FrmMain();
-            fr.Show();
         }
     }
 }
